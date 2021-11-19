@@ -79,7 +79,7 @@ def location(update, context):
 
 updater.dispatcher.add_handler(MessageHandler(Filters.location, location))
 # start polling
-@server.route('/' + TOKEN, methods=['POST'])
+@server.route('/' + '2127480280:AAHA_sDSFoZuPDoroXveI9CQUizuqCYWRPY', methods=['POST'])
 def getMessage():
     json_string = request.get_data().decode('utf-8')
     update = telebot.types.Update.de_json(json_string)
@@ -90,7 +90,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://intense-oasis-82355.herokuapp.com/' + '6c84507cbe013046861cd673e1a59a75')
+    bot.set_webhook(url='https://intense-oasis-82355.herokuapp.com/' + '2127480280:AAHA_sDSFoZuPDoroXveI9CQUizuqCYWRPY')
     return "!", 200
 
 
