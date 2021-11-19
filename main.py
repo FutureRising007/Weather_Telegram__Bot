@@ -16,6 +16,7 @@ dispatcher = updater.dispatcher
 
 
 # define a command callback function
+@bot.message_handler(commands=['start'])
 def start(update, context):
     context.bot.sendMessage(chat_id=update.message.chat_id, text="Hello, Welcome to Orion Alpha Weather Bot....")
 
@@ -49,6 +50,7 @@ def option(update, context):
 
 updater.dispatcher.add_handler(CommandHandler('option', option))
 
+@server.route('/' + '2127480280:AAHA_sDSFoZuPDoroXveI9CQUizuqCYWRPY', methods=['POST'])
 def get_location(update, context):
     button = [
         [KeyboardButton("Share Location", request_location=True)]
