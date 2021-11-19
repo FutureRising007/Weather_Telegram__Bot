@@ -89,8 +89,8 @@ def getMessage():
 
 @server.route("/")
 def webhook():
-    bot.remove_webhook()
-    bot.set_webhook(url='https://intense-oasis-82355.herokuapp.com/' + '2127480280:AAHA_sDSFoZuPDoroXveI9CQUizuqCYWRPY')
+    context.bot.remove_webhook()
+    context.bot.set_webhook(url='https://intense-oasis-82355.herokuapp.com/' + '2127480280:AAHA_sDSFoZuPDoroXveI9CQUizuqCYWRPY')
     return "!", 200
 
 
